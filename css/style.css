@@ -1,0 +1,404 @@
+:root
+{
+    --off-white: #edeff5;
+    --gray: #22232d;
+    --blurple: #7a87ff;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueThin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueLight.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueSemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueBlack.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueLightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueMediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('EpilogueSemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueBoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('fonts/EpilogueBlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+body
+{
+    background: var(--blurple);
+    color: var(--gray);
+    font-family: "Epilogue", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+#bar-container
+{
+    background-color: var(--blurple);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s cubic-bezier(.2,.4,.6,.8);
+}
+
+#bar-container.light
+{
+    background-color: var(--off-white);
+}
+
+#bar
+{
+    width: 100%;
+    max-width: 1152px;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+#bar-text
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+#bar-link-group
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bar-link
+{
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s cubic-bezier(.2,.4,.6,.8);
+}
+
+.bar-link:hover
+{
+    color: var(--off-white);
+}
+
+.bar-link-light
+{
+    color: var(--gray);
+}
+
+.bar-link-light:hover
+{
+    color: var(--blurple);
+}
+
+.bar-link-button
+{
+    color: var(--blurple);
+    background-color: var(--gray);
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 18px;
+    transition: all 0.2s cubic-bezier(.2,.4,.6,.8);
+    transition-property: color, background-color;
+}
+
+.bar-link-button:hover
+{
+    color: var(--blurple);
+    background-color: var(--off-white);
+}
+
+.bar-link-button-light
+{
+    color: var(--off-white);
+    background-color: var(--gray);
+}
+
+.bar-link-button-light:hover
+{
+    color: var(--off-white);
+    background-color: var(--blurple);
+}
+
+#bar-bar
+{
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray);
+    border-radius: 2px;
+}
+
+#layout
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex;
+}
+
+.container-bg
+{
+    background-color: var(--off-white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.fill
+{
+    background-color: var(--blurple);
+}
+
+.container
+{
+    width: 100%;
+    max-width: 1152px;
+}
+
+#panel-intro
+{
+    margin-top: 73.5px;
+    padding: 30px;
+    padding-left: 45px;
+    padding-top: 0px;
+    font-size: 13pt;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#intro-about
+{
+    width: 456px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#hero
+{
+    width: 600px;
+    height: 600px;
+}
+
+#title
+{
+    font-family: 'neulis-cursive', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 48pt;
+    width: fit-content;
+    line-height: 0.9;
+}
+
+#socials
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 0px;
+    font-weight: 400;
+}
+
+.social-link
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+}
+
+.link
+{
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.1s cubic-bezier(.2,.4,.6,.8);
+}
+
+.link:hover
+{
+    color: var(--off-white);
+}
+
+#panel-2
+{
+    box-sizing: border-box;
+    margin-left: calc(20vw + 50px);
+    padding: 45px;
+    font-size: 13pt;
+    line-height: 1.25;
+}
+
+.section-bar
+{
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray);
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bold
+{
+    font-weight: 600;
+}
+
+.body-link
+{
+    font-weight: 400;
+}
